@@ -57,7 +57,8 @@ small {
     var map = new google.maps.Map(mapDiv, {
       center: new google.maps.LatLng(43.409744, -106.273654),
       zoom: 15,
-      mapTypeId: google.maps.MapTypeId.HYBRID
+      mapTypeId: google.maps.MapTypeId.HYBRID,
+      scrollwheel:  false
     });
     map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend-open'));
     map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend'));
