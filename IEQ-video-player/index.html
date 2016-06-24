@@ -15,8 +15,8 @@ var modals =
      init:function()
      {
           $(".videoPlayer").dialog({
-               width: 576,
-               height: 324,
+               width: 864,
+               height: 486,
                autoOpen: false,
                resizable: false,
                show: {
@@ -37,13 +37,21 @@ var modals =
           $( ".loadVideo" ).click(function() 
           {
                var videoPlayerId = $(this).attr('id') + 'player';
+
                $("#" + videoPlayerId).dialog("open");
+
+
+
                if(modals.autoplay == true)
                {
+                    $('#' + videoPlayerId)[0].currentTime = 0;
                     $('#' + videoPlayerId)[0].play();
+
+
                }
                $('#overlay').fadeIn();
           });
+
 
           $(document).mouseup(function (e)
           {
@@ -59,6 +67,8 @@ var modals =
                          $('video').each(function() 
                          {
                               $(this)[0].pause();
+
+
                          });
                     }
                }
@@ -69,9 +79,11 @@ var modals =
 <style>
 .ui-dialog .ui-dialog-content
 {
-     position: relative;
-     border: 0;
-     padding: 0;
+     position: fixed;
+     right: 10px;
+     top: 120px;
+     border: 10;
+     padding: 10;
      overflow:hidden;
 }
 .ui-widget-content
@@ -124,9 +136,9 @@ body
 <div id="overlay" class="overlay"></div>
 
 <h1>IE Questions: Your Question Could Become Our Next Story</h1>
-<div width="272px">Pick a video to watch</div>
+<div width="272px">Click on a video to watch it / Click anywhere to stop the video</div>
     <h2>What's the most energy efficient way to boil water?</h2>
-     <img id="video1" class="loadVideo" src="boilingwater.png" />
+     <img id="video1" class="loadVideo" src="boilingwater.gif" />
      <video id="video1player" controls class="videoPlayer">
           <source src="boilingwater.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
           <source src="https://videoUrl/file.webm" type='video/webm; codecs="vp8, vorbis"' />
@@ -135,7 +147,7 @@ body
 
 
      <h2>What size wind generator does an average house need?</h2>
-     <img id="video2" class="loadVideo" src="wind.png" />
+     <img id="video2" class="loadVideo" src="wind.gif" />
      <video id="video2player" controls class="videoPlayer">
           <source src="wind.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
           <source src="https://videoUrl/file.webm" type='video/webm; codecs="vp8, vorbis"' />
@@ -143,7 +155,7 @@ body
      </video>
 
           <h2>How much energy do we lose, power plant to plug?</h2>
-     <img id="video3" class="loadVideo" src="transmission.png" />
+     <img id="video3" class="loadVideo" src="transmission.gif" />
      <video id="video3player" controls class="videoPlayer">
           <source src="transmission.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
           <source src="https://videoUrl/file.webm" type='video/webm; codecs="vp8, vorbis"' />
