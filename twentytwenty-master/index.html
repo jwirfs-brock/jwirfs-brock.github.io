@@ -11,6 +11,11 @@
   <title>twentytwenty</title>
   <link href="css/foundation.css" rel="stylesheet" type="text/css" />
   <link href="css/twentytwenty.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        /* See https://github.com/nprapps/pym.js/issues/83 */
+        p:first-child { margin-top: 0; }
+    </style>
 </head>
   <body>
 
@@ -21,8 +26,8 @@
       </div>
       <div class="large-8 columns">
         <div class="twentytwenty-container">
-          <img src="img/WPR-dinywood-1a.jpg" />
           <img src="img/WPR-dinywood-1b.jpg" />
+          <img src="img/WPR-dinywood-1a.jpg" />
         </div>
       </div>
       <p><em>Photo credits go here.</em></p>
@@ -38,5 +43,9 @@
       $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
     });
     </script>
+
+<script src="https://pym.nprapps.org/pym.v1.js" type="text/javascript"></script>
+    <script>var pymChild = new pym.Child();</script>
+    
   </body>
 </html>
