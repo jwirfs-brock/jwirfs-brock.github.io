@@ -95,6 +95,7 @@ function init()
         .attr("id", "barchart")
         .attr("transform", "translate(50,50)")
 
+
     
     //setup our ui
     d3.select("#data1")
