@@ -1,53 +1,123 @@
 <!DOCTYPE html>
 <html>
  <head>
-    <title>Bar Transition Example</title>
-    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
-    <script type="text/javascript" src="data.json"></script>
-    <script type="text/javascript" src="bar.js"></script>
+    <title>U.S. Power Mix Projections</title>
+    
 
     <style type="text/css">
-        #demo { 
-            float: left;        
-        }
 
+#navigation{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        position:fixed;
+        top:0px;
+        background-color: white;
+        margin-top:15px;
+        margin-bottom:50px;
+        padding: 5px;
+        margin-right:10px;
+        border: 2px solid #999;
+        border-radius: 5px;
+        z-index:100;
+    }
 
-
-.axis text {
-  font: 10px sans-serif;
+    a:link {
+    color: #666;
 }
 
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
+    a:visited {
+    color: #666;
 }
 
+b{
+    color: #333;
+    font-size:16px;
+}
 
-#chartID {
-    min-width: 531px;
+.graph-container{
+    position:relative;
+    padding-top: 60px;
+    padding-bottom: 0px;
+
+}
+
+.title{
+    text-transform: uppercase;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+    margin-left:10px;
+
+}
+
+.data-notes{
+    margin-top: 30px;
+    color: #999;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-style: italic;
+
 }
 
 
     </style>
+ 
  </head>
  <body>
+<div id="navigation"><b>JUMP TO: </b><a href="#USTotal">U.S. Total</a> | <a href="#Northwest">Northwest</a> | <a href="#California">California</a> | <a href="#Southwest_Rockies">Southwest and Rockies</a> | <a href="#Texas">Texas</a> | <a href="#Northern_Plains">Northern Plains</a> | <a href="#Southern_Plains">Southern Plains</a> | <a href="#Midwest">Midwest</a> | <a href="#Northeast">Northeast</a> | <a href="#Southeast">Southeast</a></div>
 
-    <div id="demo">
-        <div id="buttons">
-        <button id="data1">2015</button>
-        <button id="data2">2030 CPP</button>
-        <button id="data3">2030 No CPP</button>
-        <br>
-        </div>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg"></svg>
-    </div>
+<a name="USTotal"></a>
+<div class="graph-container">
+<p class="title">U.S. Total</p>
+<iframe src="us_total.html" width="100%" frameborder="0" height="281px"></iframe></div>
 
-    <script type="text/javascript">
-        init();
-    </script>
+<a name="Northwest"></a>
+<div class="graph-container">
+    <p class="title">Northwest</p>
+<iframe src="northwest.html" width="100%" frameborder="0" height="281px"></iframe></div>
 
+<a name="California"></a>
+<div class="graph-container">
+    <p class="title">California</p>
+<iframe src="california.html" width="100%" frameborder="0" height="281px"></iframe></div>
+
+<a name="Southwest_Rockies"></a>
+<div class="graph-container">
+<p class="title">Southwest and Rockies</p>
+<iframe src="sw_rockies.html" width="100%" frameborder="0" height="281px"></iframe></div>
+
+<a name="Texas"></a>
+<div class="graph-container">
+<p class="title">Texas</p>
+<iframe src="texas.html" width="100%" frameborder="0" height="281px"></iframe></div>
+
+<a name="Northern_Plains"></a>
+<div class="graph-container">
+<p class="title">Northern Plains</p>
+<iframe src="northern_plains.html" width="100%" frameborder="0" height="281px"></iframe></div>
+
+<a name="Southern_Plains"></a>
+<div class="graph-container">
+<p class="title">Southern Plains</p>
+<iframe src="southern_plains.html" width="100%" frameborder="0" height="281px"></iframe></div>
+
+<a name="Midwest"></a>
+<div class="graph-container">
+<p class="title">Midwest</p>
+<iframe src="midwest.html" width="100%" frameborder="0" height="281px"></iframe></div>
+
+<a name="Northeast"></a>
+<div class="graph-container">
+<p class="title">Northeast</p>
+<iframe src="northeast.html" width="100%" frameborder="0" height="281px"></iframe></div>
+
+<a name="Southeast"></a>
+<div class="graph-container">
+<p class="title">Southeast</p>
+<iframe src="southeast.html" width="100%" frameborder="0" height="281px"></iframe></div>
+
+<div class="data-notes">TK Data Notes<br>
+Sources<br>
+Description of what "other" means<br>
+Yadda yadda...<br></div>
 
  </body>
 </html>
