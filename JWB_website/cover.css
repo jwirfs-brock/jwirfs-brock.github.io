@@ -77,6 +77,7 @@ body {
   margin-bottom: 10px;
   color: #CD6252;
   font-size:28px;
+
 }
 
 .masthead-nav > li {
@@ -97,14 +98,14 @@ body {
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
   background-color: transparent;
-  border-bottom-color: #999;
+
   color: #7DABBB;
   /* border-bottom-color: rgba(255,255,255,.25); */
 }
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
-  color: #CD6252;
+
   border-bottom-color: #666;
 }
 
@@ -159,11 +160,11 @@ body {
 @media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
-    position: fixed;
+
     top: 0;
   }
   .mastfoot {
-    position: fixed;
+
     bottom: 0;
   }
   /* Start the vertical centering */
@@ -182,6 +183,6 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 700px;
+    width: 100%;
   }
 }
